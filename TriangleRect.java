@@ -4,12 +4,17 @@ public class TriangleRect extends FigureAbs{
 
     private double base;
     private double altura;
-    private double lado;
+    private double ladoA;
+    private double ladoB;
+    private double ladoC;
 
-    public TriangleRect(double base, double altura, double lado) {
+    public TriangleRect(double base, double altura, double ladoA, double ladoB, double ladoC) {
         this.base = base;
         this.altura = altura;
-        this.lado = lado;
+        this.ladoA = ladoA;
+        this.ladoB = ladoB;
+        this.ladoC = ladoC;
+        
     }
 
     public double getBase() {
@@ -28,12 +33,28 @@ public class TriangleRect extends FigureAbs{
         this.altura = altura;
     }
 
-    public double getLado() {
-        return lado;
+    public double getLadoA() {
+        return ladoA;
     }
 
-    public void setLado(double lado) {
-        this.lado = lado;
+    public void setLadoA(double ladoA) {
+        this.ladoA = ladoA;
+    }
+
+    public double getLadoB() {
+        return ladoB;
+    }
+
+    public void setLadoB(double ladoB) {
+        this.ladoB = ladoB;
+    }
+
+    public double getLadoC() {
+        return ladoC;
+    }
+
+    public void setLadoC(double ladoC) {
+        this.ladoC = ladoC;
     }
 
     @Override
@@ -43,6 +64,6 @@ public class TriangleRect extends FigureAbs{
 
     @Override
     public double getPerimeter() {
-        return base+altura+lado;
+        return ladoA+ladoB+ladoC;
     }
 }
